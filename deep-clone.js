@@ -85,8 +85,10 @@ const deepClone = (target, map = new WeakMap()) => {
   // 处理原型，防止原型丢失
   utils.copyPrototype(cloneTarget, target)
 
-  // 处理属性
-  const props = Object.getOwnPropertyNames(target)
+  // 处理属性，普通属性 & Symbol属性
+  const defaultProps = Object.getOwnPropertyNames(target)
+  const symbolProps = Object.getOwnPropertySymbols(target)
+  const props = [...defaultProps, ...symbolProps]
   for (let prop of props) {
     const desc = Object.getOwnPropertyDescriptor(target, prop)
     Object.defineProperty(cloneTarget, prop, {

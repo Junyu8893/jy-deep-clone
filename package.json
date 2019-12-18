@@ -1,6 +1,6 @@
 {
   "name": "jy-deep-clone",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript深拷贝",
   "main": "index.js",
   "scripts": {
