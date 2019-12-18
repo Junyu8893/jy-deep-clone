@@ -1,0 +1,11 @@
+{
+  "name": "jy-deep-clone",
+  "version": "1.0.0",
+  "description": "JavaScript深拷贝",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "啊俊俊",
+  "license": "ISC"
+}
