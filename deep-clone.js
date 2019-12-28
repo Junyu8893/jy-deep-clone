@@ -71,7 +71,7 @@ const deepClone = (target, map = new WeakMap()) => {
   // 处理Map对象
   if (type === MAP_TAG) {
     target.forEach((item, key) => {
-      cloneTarget.set(deepClone(key, map), deepClone(item, key))
+      cloneTarget.set(deepClone(key, map), deepClone(item, map))
     })
   }
 
